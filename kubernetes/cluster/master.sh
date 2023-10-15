@@ -56,6 +56,7 @@ yum remove docker \
                   docker-engine-selinux \
                   docker-engine
 
+# install container runtime containerd
 yum install wget -y
 wget https://download.docker.com/linux/centos/docker-ce.repo -O /etc/yum.repos.d/docker-ce.repo
 yum install -y containerd.io
