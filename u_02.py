@@ -27,15 +27,15 @@ if os == "solaris" and version >= 10:
     if check:
         need_check = True
 elif os == "centos" and version >= 5 and version < 7:
-    check_file('/etc/pam.d/system-auth', 'system-auth')
+    check = check_file('/etc/pam.d/system-auth', 'system-auth')
     if check:
         need_check = True
 elif os == "centos" and version >= 7:
-    check_file('/etc/security/pwquality.conf', 'pwquality.conf')
+    check = check_file('/etc/security/pwquality.conf', 'pwquality.conf')
     if check:
         need_check = True
 elif os == "ubuntu":
-    check_file('/etc/security/pwquality.conf', 'pwquality.conf')
+    check = check_file('/etc/security/pwquality.conf', 'pwquality.conf')
     if check:
         need_check = True
 else:
